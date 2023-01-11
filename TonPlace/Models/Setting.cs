@@ -14,6 +14,7 @@ namespace TonPlace.Models
         public string wallet { get; set; }
         public int? thread { get; set; }
         public Future future { get; set; }
+        public string path { get; set; }
     }
 
     public class Future

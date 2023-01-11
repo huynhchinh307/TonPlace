@@ -14,5 +14,6 @@ namespace TonPlace
         public static string profile = "https://ton.place/id{0}";
         public static string create_post = "https://ton.place/feed?section=following&w=post";
         public static string add_like = "https://api.ton.place/likes/{0}/post/add";
+        public static string add_status = "https://ton.place/{0}?w=status";
     }
 }
