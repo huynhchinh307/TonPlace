@@ -67,7 +67,7 @@
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.radGridView2 = new Telerik.WinControls.UI.RadGridView();
+            this.rad_account = new Telerik.WinControls.UI.RadGridView();
             this.radButton3 = new Telerik.WinControls.UI.RadButton();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -83,12 +83,24 @@
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.lbl_message = new Telerik.WinControls.UI.RadLabel();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.rad_running = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.btnStop = new Telerik.WinControls.UI.RadButton();
             this.btnRun = new Telerik.WinControls.UI.RadButton();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.txt_api_account = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
+            this.txt_api_mail = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
+            this.radTextBox7 = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
+            this.radTextBox8 = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
+            this.radTextBox9 = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
+            this.btn_unit_test = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnTest)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -121,8 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_account)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_account.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -139,13 +151,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_message)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_running)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_running.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRun)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_account)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_mail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_unit_test)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,6 +191,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.ItemSize = new System.Drawing.Size(80, 18);
             this.tabControl1.Location = new System.Drawing.Point(0, 324);
@@ -462,7 +487,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.radGridView2);
+            this.tabPage3.Controls.Add(this.rad_account);
             this.tabPage3.Controls.Add(this.radButton3);
             this.tabPage3.Controls.Add(this.radButton2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -472,30 +497,30 @@
             this.tabPage3.Text = "Tài khoản";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // radGridView2
+            // rad_account
             // 
-            this.radGridView2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radGridView2.Location = new System.Drawing.Point(0, 0);
+            this.rad_account.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rad_account.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
-            this.radGridView2.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView2.MasterTemplate.AllowColumnReorder = false;
-            this.radGridView2.MasterTemplate.AllowDragToGroup = false;
+            this.rad_account.MasterTemplate.AllowAddNewRow = false;
+            this.rad_account.MasterTemplate.AllowColumnReorder = false;
+            this.rad_account.MasterTemplate.AllowDragToGroup = false;
             gridViewTextBoxColumn1.HeaderText = "Tên tài khoản";
             gridViewTextBoxColumn1.Name = "column1";
             gridViewTextBoxColumn1.Width = 120;
             gridViewTextBoxColumn2.HeaderText = "Trạng thái";
             gridViewTextBoxColumn2.Name = "column2";
             gridViewTextBoxColumn2.Width = 200;
-            this.radGridView2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.rad_account.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2});
-            this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.radGridView2.Name = "radGridView2";
-            this.radGridView2.ReadOnly = true;
-            this.radGridView2.Size = new System.Drawing.Size(358, 205);
-            this.radGridView2.TabIndex = 2;
+            this.rad_account.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.rad_account.Name = "rad_account";
+            this.rad_account.ReadOnly = true;
+            this.rad_account.Size = new System.Drawing.Size(358, 205);
+            this.rad_account.TabIndex = 2;
             // 
             // radButton3
             // 
@@ -515,6 +540,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btn_unit_test);
             this.tabPage4.Controls.Add(this.radTextBox4);
             this.tabPage4.Controls.Add(this.radTextBox3);
             this.tabPage4.Controls.Add(this.radTextBox2);
@@ -622,7 +648,7 @@
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(this.lbl_message);
-            this.radGroupBox1.Controls.Add(this.radGridView1);
+            this.radGroupBox1.Controls.Add(this.rad_running);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.radGroupBox1.HeaderText = "Trạng thái chạy";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
@@ -644,29 +670,29 @@
             this.lbl_message.Text = "Đang đợi lệnh";
             this.lbl_message.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // radGridView1
+            // rad_running
             // 
-            this.radGridView1.Location = new System.Drawing.Point(5, 30);
+            this.rad_running.Location = new System.Drawing.Point(5, 30);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.AllowColumnReorder = false;
-            this.radGridView1.MasterTemplate.AllowDragToGroup = false;
+            this.rad_running.MasterTemplate.AllowAddNewRow = false;
+            this.rad_running.MasterTemplate.AllowColumnReorder = false;
+            this.rad_running.MasterTemplate.AllowDragToGroup = false;
             gridViewTextBoxColumn3.HeaderText = "Tên tài khoản";
             gridViewTextBoxColumn3.Name = "column1";
             gridViewTextBoxColumn3.Width = 120;
             gridViewTextBoxColumn4.HeaderText = "Trạng thái";
             gridViewTextBoxColumn4.Name = "column2";
             gridViewTextBoxColumn4.Width = 200;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.rad_running.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4});
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.Size = new System.Drawing.Size(352, 185);
-            this.radGridView1.TabIndex = 0;
+            this.rad_running.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.rad_running.Name = "rad_running";
+            this.rad_running.ReadOnly = true;
+            this.rad_running.Size = new System.Drawing.Size(352, 185);
+            this.rad_running.TabIndex = 0;
             // 
             // radGroupBox2
             // 
@@ -713,6 +739,124 @@
             this.btnRun.TabIndex = 1;
             this.btnRun.Text = "Chạy Auto";
             this.btnRun.ThemeName = "TelerikMetroTouch";
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.radTextBox9);
+            this.tabPage5.Controls.Add(this.radTextBox8);
+            this.tabPage5.Controls.Add(this.radLabel17);
+            this.tabPage5.Controls.Add(this.radLabel16);
+            this.tabPage5.Controls.Add(this.radTextBox7);
+            this.tabPage5.Controls.Add(this.radLabel15);
+            this.tabPage5.Controls.Add(this.txt_api_mail);
+            this.tabPage5.Controls.Add(this.radLabel14);
+            this.tabPage5.Controls.Add(this.txt_api_account);
+            this.tabPage5.Controls.Add(this.radLabel13);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(358, 238);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "API";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // txt_api_account
+            // 
+            this.txt_api_account.Location = new System.Drawing.Point(199, 17);
+            this.txt_api_account.Name = "txt_api_account";
+            this.txt_api_account.Size = new System.Drawing.Size(154, 20);
+            this.txt_api_account.TabIndex = 5;
+            this.txt_api_account.Text = "TXXX111111111111";
+            this.txt_api_account.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // radLabel13
+            // 
+            this.radLabel13.Location = new System.Drawing.Point(20, 19);
+            this.radLabel13.Name = "radLabel13";
+            this.radLabel13.Size = new System.Drawing.Size(72, 18);
+            this.radLabel13.TabIndex = 4;
+            this.radLabel13.Text = "API tài khoản";
+            // 
+            // txt_api_mail
+            // 
+            this.txt_api_mail.Location = new System.Drawing.Point(199, 55);
+            this.txt_api_mail.Name = "txt_api_mail";
+            this.txt_api_mail.Size = new System.Drawing.Size(154, 20);
+            this.txt_api_mail.TabIndex = 7;
+            this.txt_api_mail.Text = "3b7b1d0cadmsh3840d5495663fb0p1c9477jsn6e545ce8c03a";
+            this.txt_api_mail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // radLabel14
+            // 
+            this.radLabel14.Location = new System.Drawing.Point(20, 56);
+            this.radLabel14.Name = "radLabel14";
+            this.radLabel14.Size = new System.Drawing.Size(50, 18);
+            this.radLabel14.TabIndex = 6;
+            this.radLabel14.Text = "API Mail:";
+            // 
+            // radTextBox7
+            // 
+            this.radTextBox7.Location = new System.Drawing.Point(199, 95);
+            this.radTextBox7.Name = "radTextBox7";
+            this.radTextBox7.Size = new System.Drawing.Size(154, 20);
+            this.radTextBox7.TabIndex = 9;
+            this.radTextBox7.Text = "TXXX111111111111";
+            this.radTextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // radLabel15
+            // 
+            this.radLabel15.Location = new System.Drawing.Point(20, 96);
+            this.radLabel15.Name = "radLabel15";
+            this.radLabel15.Size = new System.Drawing.Size(69, 18);
+            this.radLabel15.TabIndex = 8;
+            this.radLabel15.Text = "API Captcha:";
+            // 
+            // radTextBox8
+            // 
+            this.radTextBox8.Location = new System.Drawing.Point(199, 140);
+            this.radTextBox8.Name = "radTextBox8";
+            this.radTextBox8.Size = new System.Drawing.Size(154, 20);
+            this.radTextBox8.TabIndex = 11;
+            this.radTextBox8.Text = "TXXX111111111111";
+            this.radTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // radLabel16
+            // 
+            this.radLabel16.Location = new System.Drawing.Point(20, 141);
+            this.radLabel16.Name = "radLabel16";
+            this.radLabel16.Size = new System.Drawing.Size(56, 18);
+            this.radLabel16.TabIndex = 10;
+            this.radLabel16.Text = "API Proxy:";
+            // 
+            // radTextBox9
+            // 
+            this.radTextBox9.Location = new System.Drawing.Point(199, 181);
+            this.radTextBox9.Name = "radTextBox9";
+            this.radTextBox9.Size = new System.Drawing.Size(154, 20);
+            this.radTextBox9.TabIndex = 7;
+            this.radTextBox9.Text = "TXXX111111111111";
+            this.radTextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // radLabel17
+            // 
+            this.radLabel17.Location = new System.Drawing.Point(20, 182);
+            this.radLabel17.Name = "radLabel17";
+            this.radLabel17.Size = new System.Drawing.Size(51, 18);
+            this.radLabel17.TabIndex = 6;
+            this.radLabel17.Text = "API SMS:";
+            // 
+            // btn_unit_test
+            // 
+            this.btn_unit_test.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_unit_test.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_unit_test.Location = new System.Drawing.Point(8, 106);
+            this.btn_unit_test.Name = "btn_unit_test";
+            this.btn_unit_test.Size = new System.Drawing.Size(109, 32);
+            this.btn_unit_test.TabIndex = 9;
+            this.btn_unit_test.Text = "Unit Test";
+            this.btn_unit_test.ThemeName = "TelerikMetroTouch";
+            this.btn_unit_test.Click += new System.EventHandler(this.btn_unit_test_Click);
             // 
             // frmDash
             // 
@@ -766,8 +910,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_account.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_account)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             this.tabPage4.ResumeLayout(false);
@@ -785,13 +929,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lbl_message)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_running.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rad_running)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRun)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_account)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_mail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_unit_test)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -825,7 +982,7 @@
         private System.Windows.Forms.NumericUpDown num_tab;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel lbl_message;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Telerik.WinControls.UI.RadGridView rad_running;
         private System.Windows.Forms.NumericUpDown num_commnet;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private System.Windows.Forms.NumericUpDown num_like;
@@ -839,7 +996,7 @@
         private Telerik.WinControls.UI.RadCheckBox radCheckBox7;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadTextBox txt_link_ref;
-        private Telerik.WinControls.UI.RadGridView radGridView2;
+        private Telerik.WinControls.UI.RadGridView rad_account;
         private Telerik.WinControls.UI.RadButton radButton3;
         private Telerik.WinControls.UI.RadButton radButton2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
@@ -853,5 +1010,17 @@
         private Telerik.WinControls.UI.RadLabel radLabel11;
         private Telerik.WinControls.UI.RadLabel radLabel10;
         private Telerik.WinControls.UI.RadLabel radLabel9;
+        private System.Windows.Forms.TabPage tabPage5;
+        private Telerik.WinControls.UI.RadTextBox radTextBox9;
+        private Telerik.WinControls.UI.RadTextBox radTextBox8;
+        private Telerik.WinControls.UI.RadLabel radLabel17;
+        private Telerik.WinControls.UI.RadLabel radLabel16;
+        private Telerik.WinControls.UI.RadTextBox radTextBox7;
+        private Telerik.WinControls.UI.RadLabel radLabel15;
+        private Telerik.WinControls.UI.RadTextBox txt_api_mail;
+        private Telerik.WinControls.UI.RadLabel radLabel14;
+        private Telerik.WinControls.UI.RadTextBox txt_api_account;
+        private Telerik.WinControls.UI.RadLabel radLabel13;
+        private Telerik.WinControls.UI.RadButton btn_unit_test;
     }
 }

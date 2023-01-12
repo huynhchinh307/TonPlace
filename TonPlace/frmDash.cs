@@ -103,13 +103,33 @@ namespace TonPlace
             }
 
             setting.path = txtPath.Text;
-            setting.num_tab = (int) num_tab.Value;
+            setting.num_tab = (int)num_tab.Value;
             setting.num_post = (int)num_post.Value;
             setting.num_like = (int)num_like.Value;
             setting.num_comment = (int)num_commnet.Value;
             string json_Config = JsonConvert.SerializeObject(setting, Formatting.Indented);
             FileIO.Create_File_From_Json(json_Config, "Ton\\config.json");
             MessageBox.Show("Lưu thành công");
+        }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < (int)num_tab.Value; i++)
+            {
+                Thread tab = new Thread(() =>
+                {
+
+                });
+
+                tab.SetApartmentState(ApartmentState.STA);
+                tab.Start();
+            }
+        }
+
+        private void btn_unit_test_Click(object sender, EventArgs e)
+        {
+            SDK.RapidAPI_Mail = txt_api_mail.Text;
+            SDK.Call_Create_Mai();
         }
     }
 }

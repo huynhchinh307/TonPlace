@@ -121,6 +121,7 @@
     <Compile Include="frmDash.Designer.cs">
       <DependentUpon>frmDash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\SDK.cs" />
     <Compile Include="Logic\Support.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\TonPost.cs" />
