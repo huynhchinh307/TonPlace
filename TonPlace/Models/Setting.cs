@@ -10,11 +10,14 @@ namespace TonPlace.Models
     {
         public string name_device { get; set; }
         public string key { get; set; }
-        public int earn { get; set; }
-        public string wallet { get; set; }
-        public int? thread { get; set; }
-        public Future future { get; set; }
+
+        public int num_tab { get; set; }
+        public int num_post { get; set; }
+        public int num_like { get; set; }
+        public int num_comment { get; set; }
+
         public string path { get; set; }
+        public Future future { get; set; }
     }
 
     public class Future
