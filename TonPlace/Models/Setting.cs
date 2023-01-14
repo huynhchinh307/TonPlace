@@ -16,6 +16,7 @@ namespace TonPlace.Models
         public int num_like { get; set; }
         public int num_comment { get; set; }
 
+        public string link_ref { get; set; }
         public string path { get; set; }
         public Future future { get; set; }
     }

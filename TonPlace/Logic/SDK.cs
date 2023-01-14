@@ -31,6 +31,11 @@ namespace TonPlace
 
         }
 
+        /// <summary>
+        /// Call Read Inbox
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <returns></returns>
         public static List<Inbox> Call_Read_Inbox(string mail)
         {
             var client = new RestClient("https://temp-mail44.p.rapidapi.com/api/v3/email/"+mail+"/messages");
@@ -47,8 +52,8 @@ namespace TonPlace
             {
                 return null;
             }
-
         }
+
     }
 
     public class Mails

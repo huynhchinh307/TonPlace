@@ -23,10 +23,25 @@ namespace TonPlace
         public static Setting setting = new Setting();
 
 
+        static frmDash _obj;
+        public static frmDash Instance
+        {
+            get
+            {
+                if (_obj == null)
+                {
+                    _obj = new frmDash();
+                }
+                return _obj;
+            }
+        }
+
         public frmDash()
         {
             InitializeComponent();
         }
+
+
 
         private void btnTest_Click(object sender, EventArgs e)
         {
@@ -121,6 +136,7 @@ namespace TonPlace
 
                 });
 
+                tab.Name = i.ToString();
                 tab.SetApartmentState(ApartmentState.STA);
                 tab.Start();
             }
@@ -128,8 +144,7 @@ namespace TonPlace
 
         private void btn_unit_test_Click(object sender, EventArgs e)
         {
-            SDK.RapidAPI_Mail = txt_api_mail.Text;
-            SDK.Call_Create_Mai();
+            Logic.Support.Create_Ton(setting);
         }
     }
 }

@@ -121,8 +121,10 @@
     <Compile Include="frmDash.Designer.cs">
       <DependentUpon>frmDash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\CDK_AddOn.cs" />
     <Compile Include="Logic\SDK.cs" />
     <Compile Include="Logic\Support.cs" />
+    <Compile Include="Models\Element.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\TonPost.cs" />
     <Compile Include="Models\TonUser.cs" />
