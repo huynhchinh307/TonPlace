@@ -4,8 +4,7 @@ using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace TonPlace.Logic
 {
@@ -16,19 +15,24 @@ namespace TonPlace.Logic
             this.driver = driver;
         }
         public ChromeDriver driver { get; set; }
+        // User Token--start
+        public string id { get; set; }
+        public string token { get; set; }
+        // User Token--end
         private Logger log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Hỗ trợ click element không gây ra lỗi
+        /// Click_Element
         /// </summary>
-        /// <param name="element">Chuỗi Element</param>
-        /// <param name="IsSelector">Loại truy vấn</param>
-        /// <param name="postion">Vị trí element</param>
-        /// <returns>Bool</returns>
+        /// <param name="element"></param>
+        /// <param name="IsSelector"></param>
+        /// <param name="postion"></param>
+        /// <returns></returns>
         public bool Click_Element(string element, bool IsSelector = true, int postion = 0)
         {
             try
             {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(25);
                 List<IWebElement> lst_element = IsSelector == true ? driver.FindElements(By.CssSelector(element)).ToList() : driver.FindElements(By.XPath(element)).ToList();
                 if (lst_element.Count == 0)
                 {
@@ -37,6 +41,7 @@ namespace TonPlace.Logic
                 else
                 {
                     lst_element[postion].Click();
+                    Delay(1);
                     return true;
                 }
             }
@@ -48,17 +53,18 @@ namespace TonPlace.Logic
         }
 
         /// <summary>
-        /// Hỗ trợ Get Attribute của element không gây ra lỗi
+        /// Get_Attribute_Element
         /// </summary>
-        /// <param name="element">Chuỗi Element</param>
-        /// <param name="attribute">Thuộc tính Attribute</param>
-        /// <param name="IsSelector">Loại truy vấn</param>
-        /// <param name="postion">Vị trí element</param>
+        /// <param name="element"></param>
+        /// <param name="attribute"></param>
+        /// <param name="IsSelector"></param>
+        /// <param name="postion"></param>
         /// <returns></returns>
         public string Get_Attribute_Element(string element, string attribute, bool IsSelector = true, int postion = 0)
         {
             try
             {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(25);
                 List<IWebElement> lst_element = IsSelector == true ? driver.FindElements(By.CssSelector(element)).ToList() : driver.FindElements(By.XPath(element)).ToList();
                 if (lst_element.Count == 0)
                 {
@@ -66,6 +72,7 @@ namespace TonPlace.Logic
                 }
                 else
                 {
+                    Delay(1);
                     return lst_element[postion].GetAttribute(attribute);
                 }
             }
@@ -76,10 +83,19 @@ namespace TonPlace.Logic
             }
         }
 
+        /// <summary>
+        /// Input_Element
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="text"></param>
+        /// <param name="IsSelector"></param>
+        /// <param name="postion"></param>
+        /// <returns></returns>
         public bool Input_Element(string element, string text, bool IsSelector = true, int postion = 0)
         {
             try
             {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(25);
                 List<IWebElement> lst_element = IsSelector == true ? driver.FindElements(By.CssSelector(element)).ToList() : driver.FindElements(By.XPath(element)).ToList();
                 if (lst_element.Count == 0)
                 {
@@ -88,6 +104,7 @@ namespace TonPlace.Logic
                 else
                 {
                     lst_element[postion].SendKeys(text);
+                    Delay(1);
                     return true;
                 }
             }
@@ -96,6 +113,27 @@ namespace TonPlace.Logic
                 log.Error(ex.Message, element);
                 return false;
             }
+        }
+
+        #region Chức năng delay
+        /// <summary>
+        /// Delay
+        /// </summary>
+        /// <param name="delay"></param>
+        public static void Delay(int delay)
+        {
+            while (delay > 0)
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                delay--;
+            }
+        }
+        #endregion
+
+        public void Auth(string id, string token)
+        {
+            this.id = id;
+            this.token = token;
         }
     }
 }

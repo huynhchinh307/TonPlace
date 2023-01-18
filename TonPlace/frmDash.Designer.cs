@@ -83,11 +83,11 @@
             this.txt_key_tool = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.radTextBox9 = new Telerik.WinControls.UI.RadTextBox();
-            this.radTextBox8 = new Telerik.WinControls.UI.RadTextBox();
+            this.txt_api_sms = new Telerik.WinControls.UI.RadTextBox();
+            this.txt_api_proxy = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
-            this.radTextBox7 = new Telerik.WinControls.UI.RadTextBox();
+            this.txt_api_captcha = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.txt_api_mail = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
@@ -101,6 +101,11 @@
             this.btnStop = new Telerik.WinControls.UI.RadButton();
             this.btnRun = new Telerik.WinControls.UI.RadButton();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.txt_api_post = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txt_twitter = new Telerik.WinControls.UI.RadTextBox();
+            this.btn_get_twitter = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnTest)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -150,11 +155,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_key_tool)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_sms)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_proxy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_captcha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_api_mail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
@@ -170,6 +175,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_post)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_twitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_get_twitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,7 +186,7 @@
             // 
             this.btnTest.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTest.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTest.Location = new System.Drawing.Point(8, 18);
+            this.btnTest.Location = new System.Drawing.Point(181, 104);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(54, 32);
             this.btnTest.TabIndex = 0;
@@ -540,6 +549,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btn_get_twitter);
+            this.tabPage4.Controls.Add(this.txt_twitter);
             this.tabPage4.Controls.Add(this.btn_unit_test);
             this.tabPage4.Controls.Add(this.radTextBox4);
             this.tabPage4.Controls.Add(this.radTextBox3);
@@ -563,7 +574,7 @@
             // 
             this.btn_unit_test.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_unit_test.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_unit_test.Location = new System.Drawing.Point(8, 106);
+            this.btn_unit_test.Location = new System.Drawing.Point(241, 104);
             this.btn_unit_test.Name = "btn_unit_test";
             this.btn_unit_test.Size = new System.Drawing.Size(109, 32);
             this.btn_unit_test.TabIndex = 9;
@@ -658,11 +669,13 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.radTextBox9);
-            this.tabPage5.Controls.Add(this.radTextBox8);
+            this.tabPage5.Controls.Add(this.txt_api_post);
+            this.tabPage5.Controls.Add(this.radLabel18);
+            this.tabPage5.Controls.Add(this.txt_api_sms);
+            this.tabPage5.Controls.Add(this.txt_api_proxy);
             this.tabPage5.Controls.Add(this.radLabel17);
             this.tabPage5.Controls.Add(this.radLabel16);
-            this.tabPage5.Controls.Add(this.radTextBox7);
+            this.tabPage5.Controls.Add(this.txt_api_captcha);
             this.tabPage5.Controls.Add(this.radLabel15);
             this.tabPage5.Controls.Add(this.txt_api_mail);
             this.tabPage5.Controls.Add(this.radLabel14);
@@ -676,27 +689,27 @@
             this.tabPage5.Text = "API";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // radTextBox9
+            // txt_api_sms
             // 
-            this.radTextBox9.Location = new System.Drawing.Point(199, 181);
-            this.radTextBox9.Name = "radTextBox9";
-            this.radTextBox9.Size = new System.Drawing.Size(154, 20);
-            this.radTextBox9.TabIndex = 7;
-            this.radTextBox9.Text = "TXXX111111111111";
-            this.radTextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_api_sms.Location = new System.Drawing.Point(199, 169);
+            this.txt_api_sms.Name = "txt_api_sms";
+            this.txt_api_sms.Size = new System.Drawing.Size(154, 20);
+            this.txt_api_sms.TabIndex = 7;
+            this.txt_api_sms.Text = "TXXX111111111111";
+            this.txt_api_sms.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // radTextBox8
+            // txt_api_proxy
             // 
-            this.radTextBox8.Location = new System.Drawing.Point(199, 140);
-            this.radTextBox8.Name = "radTextBox8";
-            this.radTextBox8.Size = new System.Drawing.Size(154, 20);
-            this.radTextBox8.TabIndex = 11;
-            this.radTextBox8.Text = "TXXX111111111111";
-            this.radTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_api_proxy.Location = new System.Drawing.Point(199, 131);
+            this.txt_api_proxy.Name = "txt_api_proxy";
+            this.txt_api_proxy.Size = new System.Drawing.Size(154, 20);
+            this.txt_api_proxy.TabIndex = 11;
+            this.txt_api_proxy.Text = "TXXX111111111111";
+            this.txt_api_proxy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // radLabel17
             // 
-            this.radLabel17.Location = new System.Drawing.Point(20, 182);
+            this.radLabel17.Location = new System.Drawing.Point(20, 171);
             this.radLabel17.Name = "radLabel17";
             this.radLabel17.Size = new System.Drawing.Size(51, 18);
             this.radLabel17.TabIndex = 6;
@@ -704,24 +717,24 @@
             // 
             // radLabel16
             // 
-            this.radLabel16.Location = new System.Drawing.Point(20, 141);
+            this.radLabel16.Location = new System.Drawing.Point(20, 133);
             this.radLabel16.Name = "radLabel16";
             this.radLabel16.Size = new System.Drawing.Size(56, 18);
             this.radLabel16.TabIndex = 10;
             this.radLabel16.Text = "API Proxy:";
             // 
-            // radTextBox7
+            // txt_api_captcha
             // 
-            this.radTextBox7.Location = new System.Drawing.Point(199, 95);
-            this.radTextBox7.Name = "radTextBox7";
-            this.radTextBox7.Size = new System.Drawing.Size(154, 20);
-            this.radTextBox7.TabIndex = 9;
-            this.radTextBox7.Text = "TXXX111111111111";
-            this.radTextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_api_captcha.Location = new System.Drawing.Point(199, 93);
+            this.txt_api_captcha.Name = "txt_api_captcha";
+            this.txt_api_captcha.Size = new System.Drawing.Size(154, 20);
+            this.txt_api_captcha.TabIndex = 9;
+            this.txt_api_captcha.Text = "TXXX111111111111";
+            this.txt_api_captcha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // radLabel15
             // 
-            this.radLabel15.Location = new System.Drawing.Point(20, 96);
+            this.radLabel15.Location = new System.Drawing.Point(20, 95);
             this.radLabel15.Name = "radLabel15";
             this.radLabel15.Size = new System.Drawing.Size(69, 18);
             this.radLabel15.TabIndex = 8;
@@ -738,7 +751,7 @@
             // 
             // radLabel14
             // 
-            this.radLabel14.Location = new System.Drawing.Point(20, 56);
+            this.radLabel14.Location = new System.Drawing.Point(20, 57);
             this.radLabel14.Name = "radLabel14";
             this.radLabel14.Size = new System.Drawing.Size(50, 18);
             this.radLabel14.TabIndex = 6;
@@ -755,7 +768,7 @@
             // 
             // radLabel13
             // 
-            this.radLabel13.Location = new System.Drawing.Point(20, 19);
+            this.radLabel13.Location = new System.Drawing.Point(17, 19);
             this.radLabel13.Name = "radLabel13";
             this.radLabel13.Size = new System.Drawing.Size(72, 18);
             this.radLabel13.TabIndex = 4;
@@ -827,7 +840,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(300, 26);
+            this.btnSave.Location = new System.Drawing.Point(242, 27);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(54, 32);
             this.btnSave.TabIndex = 3;
@@ -857,6 +870,45 @@
             this.btnRun.Text = "Chạy Auto";
             this.btnRun.ThemeName = "TelerikMetroTouch";
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // txt_api_post
+            // 
+            this.txt_api_post.Location = new System.Drawing.Point(199, 207);
+            this.txt_api_post.Name = "txt_api_post";
+            this.txt_api_post.Size = new System.Drawing.Size(154, 20);
+            this.txt_api_post.TabIndex = 13;
+            this.txt_api_post.Text = "TXXX111111111111";
+            this.txt_api_post.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // radLabel18
+            // 
+            this.radLabel18.Location = new System.Drawing.Point(20, 209);
+            this.radLabel18.Name = "radLabel18";
+            this.radLabel18.Size = new System.Drawing.Size(50, 18);
+            this.radLabel18.TabIndex = 12;
+            this.radLabel18.Text = "API Post:";
+            // 
+            // txt_twitter
+            // 
+            this.txt_twitter.Location = new System.Drawing.Point(8, 15);
+            this.txt_twitter.Name = "txt_twitter";
+            this.txt_twitter.NullText = "Twitter";
+            this.txt_twitter.Size = new System.Drawing.Size(237, 32);
+            this.txt_twitter.TabIndex = 10;
+            this.txt_twitter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_twitter.ThemeName = "TelerikMetroTouch";
+            // 
+            // btn_get_twitter
+            // 
+            this.btn_get_twitter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_get_twitter.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_get_twitter.Location = new System.Drawing.Point(251, 14);
+            this.btn_get_twitter.Name = "btn_get_twitter";
+            this.btn_get_twitter.Size = new System.Drawing.Size(99, 32);
+            this.btn_get_twitter.TabIndex = 11;
+            this.btn_get_twitter.Text = "Lấy bài viết";
+            this.btn_get_twitter.ThemeName = "TelerikMetroTouch";
+            this.btn_get_twitter.Click += new System.EventHandler(this.btn_get_twitter_Click);
             // 
             // frmDash
             // 
@@ -929,11 +981,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_sms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_proxy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_captcha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_api_mail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
@@ -949,6 +1001,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_api_post)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_twitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_get_twitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1011,16 +1067,21 @@
         private Telerik.WinControls.UI.RadLabel radLabel10;
         private Telerik.WinControls.UI.RadLabel radLabel9;
         private System.Windows.Forms.TabPage tabPage5;
-        private Telerik.WinControls.UI.RadTextBox radTextBox9;
-        private Telerik.WinControls.UI.RadTextBox radTextBox8;
+        private Telerik.WinControls.UI.RadTextBox txt_api_sms;
+        private Telerik.WinControls.UI.RadTextBox txt_api_proxy;
         private Telerik.WinControls.UI.RadLabel radLabel17;
         private Telerik.WinControls.UI.RadLabel radLabel16;
-        private Telerik.WinControls.UI.RadTextBox radTextBox7;
+        private Telerik.WinControls.UI.RadTextBox txt_api_captcha;
         private Telerik.WinControls.UI.RadLabel radLabel15;
         private Telerik.WinControls.UI.RadTextBox txt_api_mail;
         private Telerik.WinControls.UI.RadLabel radLabel14;
         private Telerik.WinControls.UI.RadTextBox txt_api_account;
         private Telerik.WinControls.UI.RadLabel radLabel13;
         private Telerik.WinControls.UI.RadButton btn_unit_test;
+        private Telerik.WinControls.UI.RadTextBox txt_api_post;
+        private Telerik.WinControls.UI.RadLabel radLabel18;
+        private Telerik.WinControls.UI.RadButton btn_get_twitter;
+        private Telerik.WinControls.UI.RadTextBox txt_twitter;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

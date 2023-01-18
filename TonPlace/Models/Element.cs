@@ -45,10 +45,31 @@ namespace TonPlace.Models
 
         public static class Create
         {
-            public static string Sign_up_or_Log_in = "#profile_scrollView > div > div.ptr__children > div.Profile > div.InlineAuthForm > div.InlineAuthForm__footer > div > div";
-            public static string Input_Email = "#root > div > div.Content__wrap > div.AuthPopover__wrapper > div.AuthPopover > div > div.AuthPopover__content > div.Auth > div.Form > div.Form__item.Auth__email__input.Form__item > div.Form__item__cont > div > input";
-            public static string Continue = "#root > div > div.Content__wrap > div.AuthPopover__wrapper > div.AuthPopover > div > div.AuthPopover__content > div.Auth > div.Form > div:nth-child(2) > div > div";
+            public static string Sign_up_or_Log_in = "div.ptr__children > div.Profile > div.InlineAuthForm > div.InlineAuthForm__footer > div";
+            public static string Input_Email = "div.Form__item.Auth__email__input.Form__item > div.Form__item__cont > div > input";
+            public static string Continue = "div.Auth > div.Form > div:nth-child(2) > div > div";
+            public static string Input_Code = "div.AuthPopover__content > div.Auth > div.Form.Auth__email__form > div.Form__item.Form__item > div > div > input";
+            public static string Continue_Code = "div.AuthPopover > div > div.AuthPopover__content > div.Auth > div.Form.Auth__email__form > div.Auth__email__controls > div:nth-child(1) > div > div";
+            public static string Input_Name = "#root > div > div.Content__wrap > div.Form > div:nth-child(1) > div.Form__item__cont > div > div.Input__wrapper > input";
+            public static string Continue_Name = "#root > div > div.Content__wrap > div.Form > div:nth-child(2) > div > div";
+            public static string Back = "#root > div > div.Content__wrap > div > div.Header.hasBack > div.Header__back";
+        }
 
+        public static class Profile
+        {
+            public static string link = "https://ton.place/{0}?w=edit";
+            public static string First_name = "#root > div > div.Modal__wrap > div > div.ScrollView > div > div.Form > div:nth-child(1) > div.Form__item__cont > div > input";
+            public static string Bio = "#root > div > div.Modal__wrap > div > div.ScrollView > div > div.Form > div:nth-child(3) > div.Form__item__cont > div > textarea";
+            public static string Save = "#root > div > div.Modal__wrap > div > div.BottomBar.row > div > div > div";
+            public static string Logo = "#profile_scrollView > div > div.ptr__children > div.Profile > div.Profile__info_block > div.Profile__common_info > div.UnitPhoto.large.active";
+            public static string Change_Profile = "#action_sheet > div > div.BottomSheet__sheet_wrap > div > div.BottomSheet__content.hasScroll > div > div:nth-child(1) > div > div > div.ListItem__content > div > input";
+        }
+
+        public static class Create_post
+        {
+            public static string link = "https://ton.place/{0}?w=post";
+            public static string Content = "#ql_editor > div > div.ql-editor.ql-blank";
+            public static string Publish = "#root > div > div.Modal__wrap > div > div.BottomBar.fixed.row > div > div > div";
         }
     }
 }

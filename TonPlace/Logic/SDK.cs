@@ -39,8 +39,8 @@ namespace TonPlace
         public static List<Inbox> Call_Read_Inbox(string mail)
         {
             var client = new RestClient("https://temp-mail44.p.rapidapi.com/api/v3/email/"+mail+"/messages");
-            var request = new RestRequest("", Method.Post);
-            request.AddHeader("content-type", "application/json");
+            var request = new RestRequest();
+            request.Method = Method.Get;
             request.AddHeader("X-RapidAPI-Key", RapidAPI_Mail);
             request.AddHeader("X-RapidAPI-Host", "temp-mail44.p.rapidapi.com");
             var restResponse = client.Execute<List<Inbox>>(request);

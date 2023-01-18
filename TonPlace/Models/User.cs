@@ -30,4 +30,18 @@ namespace TonPlace.Models
         public int rating { get; set; }
         public bool isBanned { get; set; }
     }
+
+    public class Tweet_Profile
+    {
+        public string username { get; set; }
+        public string name { get; set; }
+        public string profile_pic_url { get; set; }
+        public string description { get; set; }
+        public int number_of_tweets { get; set; }
+    }
+
+    public class RootProfile
+    {
+        public List<Tweet_Profile> results { get; set; }
+    }
 }

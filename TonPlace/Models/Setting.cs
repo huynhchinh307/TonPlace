@@ -18,16 +18,22 @@ namespace TonPlace.Models
 
         public string link_ref { get; set; }
         public string path { get; set; }
+        public API API { get; set; }
         public Future future { get; set; }
     }
 
     public class Future
     {
-        public string api_sms { get; set; }
-        public string api_proxy { get; set; }
-        public string api_captcha { get; set; }
-        public string api_post { get; set; }
         public string agent { get; set; }
         public string path_profile { get; set; }
+    }
+
+    public class API
+    {
+        public string api_mail { get; set; }
+        public string api_captcha { get; set; }
+        public string api_proxy { get; set; }
+        public string api_sms { get; set; }
+        public string api_post { get; set; }
     }
 }
